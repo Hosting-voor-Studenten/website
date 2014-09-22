@@ -15,7 +15,22 @@
 
 
   <script src="js/vendor/custom.modernizr.js"></script>
-
+<script>
+        $(document).ready( function() {
+               
+      $( "#logo" ).hover(function() {
+           console.log('test');
+  if ( $( ".top-menu" ).is( ":hidden" ) ) {
+  
+    $( ".top-menu" ).slideDown( 1000  );
+   
+  } else {
+    $( ".top-menu" ).hide();
+  }
+});
+     });
+    </script>
+    
     <?php
 require_once('transip/DomainService.php');
 
@@ -48,12 +63,13 @@ if(isset($_POST['domain']) && strlen($_POST['domain']) > 0)
     $(document).ready( function() {
 
  if ( $( ".registrationForm" ).is( ":hidden" ) ) {
-     console.log('schaap');
+  
     $( ".registrationForm" ).slideDown( 1000  );
    
   } else {
     $( ".registrationForm" ).hide();
   }
+
     });
     </script>
    <?php    
@@ -100,7 +116,7 @@ else
     
 
   <div class="menu">
-  <div class="menu-inner">
+ 
   <img src="img/logo.png" width="230" id="logo">
    <ul class="top-menu">
       <li><a href="">Home</a></li>
@@ -109,6 +125,7 @@ else
       <li><a href="">Vragen</a></li>
       <li><a href="">Contact</a></li>
   </ul>
+
   </div>
   <div class="slider">
   <div class="title-slider">Kijk <strong>snel</strong> of <strong>jou domeinnaam</strong> nog <strong>vrij</strong> is
@@ -122,9 +139,7 @@ else
 @RHAYMONDO
 </div>
   </div>
-  <div class="stroke">
-  </div>
-    
+  
     <div class="registrationForm">
              <?php
                     if ($_POST['verzenden']) { 
@@ -184,7 +199,7 @@ mail($to, $subject, $message, $headers);
         <input type="text" class="input-text" name="name" placeholder="Volledige naam *" />
       </label>
     </div>
-         </div>
+     </div>
         <div class="row collapse ">
     <div class="large-6 small-centered columns">
       <label>
@@ -205,11 +220,7 @@ mail($to, $subject, $message, $headers);
                </form>
     </div>
 
-  <div class="row featured">
-  <div class="large-4 columns"><img src="img/featured-1.png"></div>
-    <div class="large-4 columns"><img src="img/featured-2.png"></div>
-      <div class="large-4 columns"><img src="img/featured-3.png"></div>
-  
+
   <script>
   document.write('<script src=' +
   ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
