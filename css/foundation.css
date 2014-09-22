@@ -50,6 +50,9 @@ left: 50%;
 width: 230px;
 padding-top: 11px;
 }
+#domainChecker {
+    position: relative;
+}
 #check {
 float: left;
 width: 100px;
@@ -89,7 +92,7 @@ font-size: 18px;
 input.input-text {
 border: 1px solid rgb(219, 219, 219)!important;
 outline: none!important;
-background-color: transparent!important;
+background:rgba(255, 255, 255, 0.5)!important;
 color: #FF003D!important;
 height: 46px!important;
 border-radius: 4px!important;
@@ -103,8 +106,23 @@ font-weight: 300;
   transition: all 1s ease-in-out;
 
 }
-input.input-text:focus{
 
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:   rgba(0, 0, 0, 0.75)
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:   rgba(0, 0, 0, 0.75);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:   rgba(0, 0, 0, 0.75);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    rgba(0, 0, 0, 0.75)
+}
+input.input-text:focus{
+color:rgba(0, 0, 0, 0.75);
 	border: 1px solid #FF003B!important;
 	width:105%;
   -webkit-transition: all 0.5s ease-in-out;
@@ -115,6 +133,16 @@ input.input-text:focus{
 .positive{
    
     background:#83c400;
+    position: absolute;
+top: 20;
+right: 0;
+height: 41px;
+
+width: 101px;
+border-bottom-LEFT-radius: 0;
+border-top-left-radius: 0;
+padding-left: 34px;
+line-height: 41px;
 }
 .padding-text {
 padding: 10px 14px;
@@ -123,11 +151,8 @@ padding: 10px 14px;
 width: 100%;
 display: none;
 margin: 0 auto;
-background-color: #FFF;
-/* padding: 60px 115px; */
-/* border-bottom-left-radius: 10px; */
-padding-top: 65px;
-height: 260px;
+position: absolute;
+top: 56%;
 }
 input#submit-button {
 background-color: #FF003b;

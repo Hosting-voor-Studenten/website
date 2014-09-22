@@ -33,7 +33,7 @@
  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/smoothscroll.js"></script>
 
-
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="js/vendor/custom.modernizr.js"></script>
     <style type="text/css">
 <!--
@@ -73,8 +73,9 @@ if(isset($_POST['domain']) && strlen($_POST['domain']) > 0)
 			break;
 
 			case Transip_DomainService::AVAILABILITY_FREE:
-				$result = htmlspecialchars($domain) 
-							. ' is nog vrij!';
+			//	$result = htmlspecialchars($domain) 
+						//	. ' is nog vrij!';
+            $result = "<i class='fa fa-check' style='margin-left:28px;'></i>";
                 ?> <script>
 
     $(document).ready( function() {
@@ -138,9 +139,9 @@ else
   <div class="slider">
   <div class="title-slider animated fadeInDown">Kijk <strong>snel</strong> of <strong>jouw domeinnaam</strong> nog <strong>vrij</strong> is
 <form name="domainChecker" id="domainChecker" method="post">
-		<input type="text" name="domain" id="domein" autofocus value="<?=htmlspecialchars($domain)?>"  onfocus="if(this.value == 'Type hier jouw domeinnaam') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Type hier jouw domeinnaam'; }">
+		<input type="text" name="domain" id="domein" autofocus value="<?=htmlspecialchars($domain)?>"  onfocus="if(this.value == 'Type hier jouw domeinnaam') { this.value = ''; }" ">
 		<input type="submit" id="check" name="check" value="Check"/><br/>
-		<div class="message <?php if (strpos($result,'vrij'))  { echo 'positive '; $showRegForm = true; } else { echo 'negative ';} if ($result) { echo 'padding-text'; }?> "><?=$result?></div>
+		<div class="message <?php if (strpos($result,'check'))  { echo 'positive '; $showRegForm = true; } else { echo 'negative ';} if ($result) { echo 'padding-text'; }?> "><?=$result?></div>
 	</form>
     </div>
 <div class="photo-text">
@@ -228,7 +229,7 @@ mail($to, $subject, $message, $headers);
     </div>
     <div class="row collapse ">
     <div class=" large-6 small-centered columns">
-      <input type="submit" class="button postfix" value="Verzend!" name="verzenden" id="submit-button" />
+      <input type="submit" class="button postfix" value="Koop!" name="verzenden" id="submit-button" />
         </div>
         </div>
   </div>
