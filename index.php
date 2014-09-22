@@ -1,3 +1,12 @@
+<?php
+  $bg = array('bg-0.jpg', 'bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg' ); // array of filenames
+
+  $i = rand(0, count($bg)-1); // generate random number size of the array
+  $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
+?>
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
 <head>
 	<meta charset="utf-8" />
@@ -15,21 +24,18 @@
 
 
   <script src="js/vendor/custom.modernizr.js"></script>
-<script>
-        $(document).ready( function() {
-               
-      $( "#logo" ).hover(function() {
-           console.log('test');
-  if ( $( ".top-menu" ).is( ":hidden" ) ) {
-  
-    $( ".top-menu" ).slideDown( 1000  );
-   
-  } else {
-    $( ".top-menu" ).hide();
-  }
-});
-     });
-    </script>
+    <style type="text/css">
+<!--
+body{
+background: url(img/<?php echo $selectedBg; ?>) no-repeat center center;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+        height:100vh;
+}
+-->
+</style>
     
     <?php
 require_once('transip/DomainService.php');
@@ -98,10 +104,8 @@ else
 }
 
 ?>
-<!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
+    
 
 </head>
 <body>
@@ -115,22 +119,15 @@ else
 }(document, 'script', 'facebook-jssdk'));</script>
     
 
-  <div class="menu">
+  <!--<div class="menu">
  
   <img src="img/logo.png" width="230" id="logo">
-   <ul class="top-menu">
-      <li><a href="">Home</a></li>
-      <li><a href="">Pakketten</a></li>
-      <li><a href="">Over Ons</a></li>
-      <li><a href="">Vragen</a></li>
-      <li><a href="">Contact</a></li>
-  </ul>
 
-  </div>
+  </div>-->
   <div class="slider">
-  <div class="title-slider">Kijk <strong>snel</strong> of <strong>jou domeinnaam</strong> nog <strong>vrij</strong> is
+  <div class="title-slider">Kijk <strong>snel</strong> of <strong>jouw domeinnaam</strong> nog <strong>vrij</strong> is
 <form name="domainChecker" id="domainChecker" method="post">
-		<input type="text" name="domain" id="domein" value="<?=htmlspecialchars($domain)?>"  onfocus="if(this.value == 'Type hier jouw domeinnaam') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Type hier jouw domeinnaam'; }">
+		<input type="text" name="domain" id="domein" autofocus value="<?=htmlspecialchars($domain)?>"  onfocus="if(this.value == 'Type hier jouw domeinnaam') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Type hier jouw domeinnaam'; }">
 		<input type="submit" id="check" name="check" value="Check"/><br/>
 		<div class="message <?php if (strpos($result,'vrij'))  { echo 'positive '; $showRegForm = true; } else { echo 'negative ';} if ($result) { echo 'padding-text'; }?> "><?=$result?></div>
 	</form>
@@ -138,6 +135,13 @@ else
 <div class="photo-text">
 @RHAYMONDO
 </div>
+      <ul class="top-menu">
+      <li><a href="">Home</a></li>
+      <li><a href="">Pakketten</a></li>
+      <li><a href="">Over Ons</a></li>
+      <li><a href="">Vragen</a></li>
+      <li><a href="">Contact</a></li>
+  </ul>
   </div>
   
     <div class="registrationForm">

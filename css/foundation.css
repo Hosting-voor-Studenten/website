@@ -39,9 +39,8 @@ font-size: 18px;
 ul.top-menu
 {
     position: absolute;
-    left: 50%;
-    margin-left:-290px;
-    display: none;
+    right: 20px;
+    bottom:0px;
 }
 #logo
 {
@@ -154,11 +153,6 @@ input#submit-button:hover
 width: 100%;
 height: auto;
     min-height: 100%;
-background: url(../img/bg-1.jpg) no-repeat center center;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
 margin: 0 auto;
 position: relative;
 }
@@ -172,14 +166,14 @@ height: 40px;
 padding: 10px 10px;
 border-radius: 7px;
 position: absolute;
-right: 10;
-bottom: 10;
+left: 10px;
+bottom: 10px;
 }
 .title-slider
 {
     
     color:white;
-    font-size:30px;
+    font-size: 28.8px;
     width: 566px;
     height:auto;
     position: relative;
@@ -196,12 +190,12 @@ li
 {
     position:relative;
     float:left;
-font-family: lato;
-    font-weight:400;
+font-family:Helvetica, Arial,  sans-serif;
+    font-weight:700;
     width: auto;
     text-transform: uppercase;
-    margin-left: 30px;
-    font-size:14px;
+    margin-left: 20px;
+    font-size:12px;
     
  
 }
