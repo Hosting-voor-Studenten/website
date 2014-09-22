@@ -202,7 +202,9 @@ font-family:Helvetica, Arial,  sans-serif;
 
 li a:hover
 {
-color:#ff2750;
+text-decoration: underline;
+    color: #FFF;
+    
 }
 .stroke
 {
@@ -1966,9 +1968,12 @@ input[type="tel"]:focus,
 input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus {
-    background: #fafafa;
-    border-color: #999999;
-    outline: none; }
+    
+outline: none!important;
+border: none!important;
+box-shadow: none!important;
+}
+}
 input[type="text"][disabled],
 input[type="password"][disabled],
 input[type="date"][disabled],

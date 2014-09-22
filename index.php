@@ -1,5 +1,5 @@
 <?php
-  $bg = array('bg-0.jpg', 'bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg' ); // array of filenames
+  $bg = array('bg-0.jpg', 'bg-01.jpg', 'bg-02.jpg', 'bg-03.jpg', 'bg-04.jpg', 'bg-05.jpg', 'bg-06.jpg', 'bg-07.jpg', 'bg-08.jpg',  ); // array of filenames
 
   $i = rand(0, count($bg)-1); // generate random number size of the array
   $selectedBg = "$bg[$i]"; // set variable equal to which random filename was chosen
@@ -125,7 +125,7 @@ else
 
   </div>-->
   <div class="slider">
-  <div class="title-slider">Kijk <strong>snel</strong> of <strong>jouw domeinnaam</strong> nog <strong>vrij</strong> is
+  <div class="title-slider animated fadeInDown">Kijk <strong>snel</strong> of <strong>jouw domeinnaam</strong> nog <strong>vrij</strong> is
 <form name="domainChecker" id="domainChecker" method="post">
 		<input type="text" name="domain" id="domein" autofocus value="<?=htmlspecialchars($domain)?>"  onfocus="if(this.value == 'Type hier jouw domeinnaam') { this.value = ''; }" onblur="if(this.value == '') { this.value = 'Type hier jouw domeinnaam'; }">
 		<input type="submit" id="check" name="check" value="Check"/><br/>
@@ -137,8 +137,8 @@ else
 </div>
       <ul class="top-menu">
       <li><a href="">Home</a></li>
-      <li><a href="">Pakketten</a></li>
       <li><a href="">Over Ons</a></li>
+      <li><a href="">Pakketten</a></li>
       <li><a href="">Vragen</a></li>
       <li><a href="">Contact</a></li>
   </ul>
