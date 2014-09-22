@@ -149,6 +149,8 @@ input#submit-button:hover
     cursor:pointer;
 }
 
+
+
 .slider {
 width: 100%;
 height: auto;
@@ -170,8 +172,7 @@ left: 10px;
 bottom: 10px;
 }
 .title-slider
-{
-    
+{ 
     color:white;
     font-size: 28.8px;
     width: 566px;
