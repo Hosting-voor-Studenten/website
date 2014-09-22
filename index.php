@@ -132,9 +132,6 @@ else
 		<div class="message <?php if (strpos($result,'vrij'))  { echo 'positive '; $showRegForm = true; } else { echo 'negative ';} if ($result) { echo 'padding-text'; }?> "><?=$result?></div>
 	</form>
     </div>
-<div class="photo-text">
-@RHAYMONDO
-</div>
       <ul class="top-menu">
       <li><a href="">Home</a></li>
       <li><a href="">Over Ons</a></li>

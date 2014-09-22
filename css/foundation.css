@@ -6,11 +6,11 @@ body{height:100%}
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 
-.menu
+/*.menu
 {     width: 100%;
     height:60px;
    border: 0 none;
-
+text-align: right;
     margin: 0 auto;
     font-size:17px;
     font-family: open-sans;
@@ -18,14 +18,11 @@ body{height:100%}
     top: 0;
     position: fixed;
    z-index: 9;
-}
-.menu-inner
-{
-    width: 980px;
-    height: 60px;
-    margin:0 auto;
-    position: relative;
-}
+    padding-left: 10px;
+    padding-top:10px;
+    opacity: 0.9;
+}*/
+
 #domein {
 width: 465px;
 float: left;
@@ -42,14 +39,7 @@ ul.top-menu
     right: 20px;
     bottom:0px;
 }
-#logo
-{
-margin-left: -115px;
-position: absolute;
-left: 50%;
-width: 230px;
-padding-top: 11px;
-}
+
 #check {
 float: left;
 width: 100px;
