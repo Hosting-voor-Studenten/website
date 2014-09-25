@@ -137,7 +137,7 @@ else
 
   </div>-->
   <div class="slider">
-  <div class="title-slider animated fadeInDown">Kijk <strong>snel</strong> of <strong>jouw domeinnaam</strong> nog <strong>vrij</strong> is
+  <div class="title-slider animated fadeInDown">Kijk <strong></strong> of <strong>jouw domeinnaam</strong> nog <strong>vrij</strong> is
 <form name="domainChecker" id="domainChecker" method="post">
 		<input type="text" name="domain" id="domein" autofocus value="<?=htmlspecialchars($domain)?>"  onfocus="if(this.value == 'Type hier jouw domeinnaam') { this.value = ''; }" ">
 		<input type="submit" id="check" name="check" value="Check"/><br/>
